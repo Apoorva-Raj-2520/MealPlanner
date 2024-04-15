@@ -1,7 +1,11 @@
 package com.example.MealPlanner;
 
+import javax.swing.SwingUtilities;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.MealPlanner.view.ShoppingListGUI;
 
 @SpringBootApplication
 public class MealPlannerApplication {
@@ -10,10 +14,10 @@ public class MealPlannerApplication {
 		SpringApplication.run(MealPlannerApplication.class, args);
 		SwingUtilities.invokeLater(() -> {
             // Create an instance of your Swing GUI class
-            MealPlannerGUI mealPlannerGUI = new MealPlannerGUI();
+            ShoppingListGUI shoppingListGUI = new ShoppingListGUI();
 
             // Make the GUI visible
-            mealPlannerGUI.setVisible(true);
+            shoppingListGUI.setVisible(true);
         });
 	}
 
